@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <ul class="navbar__list">
+    <li class="navbar__item">
+      <a class="navbar__link" [routerLink]="['/admin']"
+        ><fa-icon class="navbar__link--icon" [icon]="faUsers"></fa-icon>B2C</a
+      >
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" [routerLink]="['/b2b']"
+        ><fa-icon class="navbar__link--icon" [icon]="faBriefcase"></fa-icon
+        >B2B</a
+      >
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" [routerLink]="['/admin']"
+        ><fa-icon class="navbar__link--icon" [icon]="faBars"></fa-icon>LOREM
+        IPSUM</a
+      >
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link" [routerLink]="['/admin']"
+        ><fa-icon class="navbar__link--icon" [icon]="faHandPointRight"></fa-icon
+        >LOREM IPSUM</a
+      >
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link cursor-pointer" (click)="logOutFunction()"
+        ><fa-icon
+          class="navbar__link--icon"
+          [icon]="faRightFromBracket"
+        ></fa-icon
+        >OTURUMU KAPAT</a
+      >
+    </li>
+  </ul>
+</nav>

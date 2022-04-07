@@ -1,0 +1,70 @@
+<div class="container-2xl mx-auto flex h-screen flex-row">
+  <div
+    class="bg-white flex h-screen w-5/12 flex-col items-center justify-center"
+  >
+    <img class="w-4/5" src="../assets/etiya-logo.png" alt="" />
+  </div>
+
+  <div
+    class="flex h-screen w-7/12 flex-col items-center justify-center bg-etiyaNavyBlue"
+  >
+    <h1 class="text-white mb-6">Kullanıcı Girişi</h1>
+    <form
+      class="w-3/5"
+      [formGroup]="userForm"
+      (ngSubmit)="loginFunction()"
+      method="post"
+    >
+      <div class="mb-6">
+        <label
+          for="email"
+          class="text-white dark:text-gray-300 text-md mb-2 block font-medium"
+          >Kullanıcı Adınız</label
+        >
+        <input
+          formControlName="email"
+          name="userEmail"
+          type="email"
+          id="email"
+          class="border-gray-300 bg-gray-50 text-gray-900 focus:border-blue-500 focus:ring-blue-500 text-md block w-full rounded-sm border-2 p-3"
+          placeholder="Email..."
+          required
+        />
+        <div
+          class="text-etiyaOrangeColor"
+          *ngIf="email?.invalid && email?.touched"
+        >
+          Lütfen email adresinizi girin.
+        </div>
+      </div>
+      <div class="mb-6">
+        <label
+          for="password"
+          class="text-white dark:text-gray-300 text-md mb-2 block font-medium"
+          >Şifreniz</label
+        >
+        <input
+          formControlName="password"
+          name="userPassword"
+          type="password"
+          id="password"
+          class="border-gray-300 bg-gray-50 text-gray-900 focus:border-blue-500 focus:ring-blue-500 text-md block w-full rounded-sm border-2 p-3"
+          placeholder="Şifre..."
+          required
+        />
+        <div
+          class="text-etiyaOrangeColor"
+          *ngIf="password?.invalid && password?.touched"
+        >
+          Lütfen şifrenizi girin.
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="hover:bg-blue-800 focus:ring-blue-300 text-md text-black w-full rounded-sm bg-etiyaOrangeColor px-5 py-3 text-center font-medium focus:outline-none focus:ring-4 sm:w-auto"
+      >
+        Giriş
+      </button>
+    </form>
+  </div>
+</div>

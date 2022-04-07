@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="flex flex-row">
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="w-11/12">
+    <div class="mt-0 mb-4">
+      <div class="text-neutral-400 mb-1">Ürün Arama</div>
+      <input
+        type="search"
+        class="form-input text-md w-full rounded-sm border-2 p-3"
+        placeholder="Search.. Id, Price, Title"
+      />
+    </div>
+
+    <hr class="mb-4" />
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="text-gray-500 w-full text-left text-sm">
+        <thead class="text-gray-700 bg-gray-50 text-sm uppercase">
+          <tr>
+            <th scope="col" class="px-6 py-3">#</th>
+            <th scope="col" class="px-6 py-3">ID</th>
+            <th scope="col" class="px-6 py-3">Title</th>
+            <th scope="col" class="px-6 py-3">Price</th>
+            <th scope="col" class="px-6 py-3">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="odd:bg-white even:bg-gray-50 border-b">
+            <td
+              scope="row"
+              class="text-gray-900 whitespace-nowrap px-6 py-4 text-lg"
+            >
+              Apple MacBook Pro 17"
+            </td>
+            <td class="px-6 py-4">Sliver</td>
+            <td class="px-6 py-4">Laptop</td>
+            <td class="px-6 py-4">$2999</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
